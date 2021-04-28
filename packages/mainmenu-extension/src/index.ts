@@ -327,7 +327,7 @@ export function createFileMenu(
   trans: TranslationBundle
 ): void {
   const commands = menu.menu.commands;
-  menu.menu.title.label = trans.__('File');
+  menu.menu.title.label = trans.__('File_55');
   menu.newMenu.menu.title.label = trans.__('New');
 
   // Add a delegator command for closing and cleaning up an activity.
