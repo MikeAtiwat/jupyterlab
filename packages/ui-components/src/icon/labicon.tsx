@@ -100,26 +100,26 @@ export class LabIcon implements LabIcon.ILabIcon, VirtualElement.IRenderer {
    *
    * @returns a DOM node with the resolved icon rendered into it
    */
-  static resolveElement({
-    icon,
-    iconClass,
-    fallback,
-    ...props
-  }: Partial<LabIcon.IResolverProps> & LabIcon.IProps) {
-    if (!Private.isResolvable(icon)) {
-      if (!iconClass && fallback) {
-        // if neither icon nor iconClass are defined/resolvable, use fallback
-        return fallback.element(props);
-      }
+  // static resolveElement({
+  //   icon,
+  //   iconClass,
+  //   fallback,
+  //   ...props
+  // }: Partial<LabIcon.IResolverProps> & LabIcon.IProps) {
+  //   if (!Private.isResolvable(icon)) {
+  //     if (!iconClass && fallback) {
+  //       // if neither icon nor iconClass are defined/resolvable, use fallback
+  //       return fallback.element(props);
+  //     }
 
-      // set the icon's class to iconClass plus props.className
-      props.className = classes(iconClass, props.className);
-      // render icon as css background image, assuming one is set on iconClass
-      return Private.blankElement(props);
-    }
+  //     // set the icon's class to iconClass plus props.className
+  //     props.className = classes(iconClass, props.className);
+  //     // render icon as css background image, assuming one is set on iconClass
+  //     return Private.blankElement(props);
+  //   }
 
-    return LabIcon.resolve({ icon }).element(props);
-  }
+  //   return LabIcon.resolve({ icon }).element(props);
+  // }
 
   /**
    * Resolve an icon name or a {name, svgstr} pair into a React component.
@@ -142,57 +142,57 @@ export class LabIcon implements LabIcon.ILabIcon, VirtualElement.IRenderer {
    *
    * @returns a React component that will render the resolved icon
    */
-  static resolveReact({
-    icon,
-    iconClass,
-    fallback,
-    ...props
-  }: Partial<LabIcon.IResolverProps> & LabIcon.IReactProps) {
-    if (!Private.isResolvable(icon)) {
-      if (!iconClass && fallback) {
-        // if neither icon nor iconClass are defined/resolvable, use fallback
-        return <fallback.react {...props} />;
-      }
+  // static resolveReact({
+  //   icon,
+  //   iconClass,
+  //   fallback,
+  //   ...props
+  // }: Partial<LabIcon.IResolverProps> & LabIcon.IReactProps) {
+  //   if (!Private.isResolvable(icon)) {
+  //     if (!iconClass && fallback) {
+  //       // if neither icon nor iconClass are defined/resolvable, use fallback
+  //       return <fallback.react {...props} />;
+  //     }
 
-      // set the icon's class to iconClass plus props.className
-      props.className = classes(iconClass, props.className);
-      // render icon as css background image, assuming one is set on iconClass
-      return <Private.blankReact {...props} />;
-    }
+  //     // set the icon's class to iconClass plus props.className
+  //     props.className = classes(iconClass, props.className);
+  //     // render icon as css background image, assuming one is set on iconClass
+  //     return <Private.blankReact {...props} />;
+  //   }
 
-    const resolved = LabIcon.resolve({ icon });
-    return <resolved.react {...props} />;
-  }
+  //   const resolved = LabIcon.resolve({ icon });
+  //   return <resolved.react {...props} />;
+  // }
 
   /**
    * Resolve a {name, svgstr} pair into an actual svg node.
    */
-  static resolveSvg({ name, svgstr }: LabIcon.IIcon): HTMLElement | null {
-    const svgDoc = new DOMParser().parseFromString(
-      Private.svgstrShim(svgstr),
-      'image/svg+xml'
-    );
+  // static resolveSvg({ name, svgstr }: LabIcon.IIcon): HTMLElement | null {
+  //   const svgDoc = new DOMParser().parseFromString(
+  //     Private.svgstrShim(svgstr),
+  //     'image/svg+xml'
+  //   );
 
-    const svgError = svgDoc.querySelector('parsererror');
+  //   const svgError = svgDoc.querySelector('parsererror');
 
-    // structure of error element varies by browser, search at top level
-    if (svgError) {
-      // parse failed, svgElement will be an error box
-      const errmsg = `SVG HTML was malformed for LabIcon instance.\nname: ${name}, svgstr: ${svgstr}`;
-      if (LabIcon._debug) {
-        // fail noisily, render the error box
-        console.error(errmsg);
-        return svgError as HTMLElement;
-      } else {
-        // bad svg is always a real error, fail silently but warn
-        console.warn(errmsg);
-        return null;
-      }
-    } else {
-      // parse succeeded
-      return svgDoc.documentElement;
-    }
-  }
+  //   // structure of error element varies by browser, search at top level
+  //   if (svgError) {
+  //     // parse failed, svgElement will be an error box
+  //     const errmsg = `SVG HTML was malformed for LabIcon instance.\nname: ${name}, svgstr: ${svgstr}`;
+  //     if (LabIcon._debug) {
+  //       // fail noisily, render the error box
+  //       console.error(errmsg);
+  //       return svgError as HTMLElement;
+  //     } else {
+  //       // bad svg is always a real error, fail silently but warn
+  //       console.warn(errmsg);
+  //       return null;
+  //     }
+  //   } else {
+  //     // parse succeeded
+  //     return svgDoc.documentElement;
+  //   }
+  // }
 
   /**
    * Toggle icon debug from off-to-on, or vice-versa.
