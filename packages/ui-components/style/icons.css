@@ -17,9 +17,9 @@
 .jp-icon2[fill] {
   fill: var(--jp-inverse-layout-color2);
 }
-/*.jp-icon3[fill] {
+.jp-icon3[fill] {
   fill: var(--jp-inverse-layout-color3);
-}*/
+}
 .jp-icon4[fill] {
   fill: var(--jp-inverse-layout-color4);
 }
@@ -112,9 +112,9 @@
   stroke: var(--jp-brand-color4);
 }
 /* warn icon colors. Same for light and dark */
-/*.jp-icon-warn0[fill] {
+.jp-icon-warn0[fill] {
   fill: var(--jp-warn-color0);
-}*/
+}
 .jp-icon-warn1[fill] {
   fill: var(--jp-warn-color1);
 }
