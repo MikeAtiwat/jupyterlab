@@ -50,6 +50,8 @@ export class MainMenu extends MenuBar implements IMainMenu {
     this.addMenu(this.viewMenu.menu, { rank: 3 });
     this.addMenu(this.runMenu.menu, { rank: 4 });
     this.addMenu(this.kernelMenu.menu, { rank: 5 });
+    this.addMenu(this.kernelMenu.menu, { rank: 6 });
+    this.addMenu(this.kernelMenu.menu, { rank: 7 });
     this.addMenu(this.tabsMenu.menu, { rank: 500 });
     this.addMenu(this.settingsMenu.menu, { rank: 999 });
     this.addMenu(this.helpMenu.menu, { rank: 1000 });
