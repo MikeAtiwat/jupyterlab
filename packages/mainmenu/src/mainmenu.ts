@@ -9,7 +9,7 @@ import { CommandRegistry } from '@lumino/commands';
 
 import { Menu, MenuBar } from '@lumino/widgets';
 
-// import { FileMenu } from './file';
+import { FileMenu } from './file';
 
 import { EditMenu } from './edit';
 
@@ -37,7 +37,7 @@ export class MainMenu extends MenuBar implements IMainMenu {
   constructor(commands: CommandRegistry) {
     super();
     this.editMenu = new EditMenu({ commands });
-    // this.fileMenu = new FileMenu({ commands });
+    this.fileMenu = new FileMenu({ commands });
     this.helpMenu = new HelpMenu({ commands });
     this.kernelMenu = new KernelMenu({ commands });
     this.runMenu = new RunMenu({ commands });
@@ -45,7 +45,7 @@ export class MainMenu extends MenuBar implements IMainMenu {
     this.viewMenu = new ViewMenu({ commands });
     this.tabsMenu = new TabsMenu({ commands });
 
-    // this.addMenu(this.fileMenu.menu, { rank: 1 });
+    this.addMenu(this.fileMenu.menu, { rank: 1 });
     this.addMenu(this.editMenu.menu, { rank: 2 });
     this.addMenu(this.viewMenu.menu, { rank: 3 });
     this.addMenu(this.runMenu.menu, { rank: 4 });
@@ -63,7 +63,7 @@ export class MainMenu extends MenuBar implements IMainMenu {
   /**
    * The application "File" menu.
    */
-  // readonly fileMenu: FileMenu;
+  readonly fileMenu: FileMenu;
 
   /**
    * The application "Help" menu.
@@ -125,7 +125,7 @@ export class MainMenu extends MenuBar implements IMainMenu {
    */
   dispose(): void {
     this.editMenu.dispose();
-    // this.fileMenu.dispose();
+    this.fileMenu.dispose();
     this.helpMenu.dispose();
     this.kernelMenu.dispose();
     this.runMenu.dispose();
