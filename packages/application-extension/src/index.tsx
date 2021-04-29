@@ -964,7 +964,7 @@ const JupyterLogo: JupyterFrontEndPlugin<void> = {
       elementPosition: 'center',
       margin: '2px 2px 2px 8px',
       height: 'auto',
-      width: '16px'
+      width: 'auto'
     });
     logo.id = 'jp-MainLogo';
     shell.add(logo, 'top', { rank: 0 });
