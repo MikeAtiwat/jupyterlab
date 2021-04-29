@@ -55,7 +55,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
       const v = new ExtensionView(app, serviceManager, settings, translator);
       v.id = 'extensionmanager.main-view';
       v.title.icon = extensionIcon;
-      v.title.caption = trans.__('Extension Manager');
+      v.title.caption = trans.__('Extension Manager OK 5555');
       if (restorer) {
         restorer.add(v, v.id);
       }

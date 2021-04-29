@@ -64,7 +64,7 @@ async function activateTOC(
 
   // Add the ToC to the left area:
   toc.title.icon = tocIcon;
-  toc.title.caption = trans.__('Table of Contents');
+  toc.title.caption = trans.__('Table of Contents ABCDEFG');
   toc.id = 'table-of-contents';
   toc.node.setAttribute('role', 'region');
   toc.node.setAttribute('aria-label', trans.__('Table of Contents section'));
