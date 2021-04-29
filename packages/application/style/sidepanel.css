@@ -63,9 +63,9 @@
 }
 
 .jp-SideBar .lm-TabBar-tabIcon.jp-SideBar-tabIcon {
-  min-width: 24px;
-  min-height: 24px;
-  background-size: 24px;
+  min-width: 20px;
+  min-height: 20px;
+  background-size: 20px;
   display: inline-block;
   vertical-align: middle;
   background-repeat: no-repeat;

@@ -389,7 +389,7 @@ export namespace LabIconStyle {
       },
       element: {
         height: 'auto',
-        width: '20px'
+        width: '32px'
       },
       options: {
         elementPosition: 'center'
