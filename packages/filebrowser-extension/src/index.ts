@@ -198,7 +198,7 @@ const browser: JupyterFrontEndPlugin<void> = {
       );
       if (binding) {
         const ks = CommandRegistry.formatKeystroke(binding.keys.join(' '));
-        browser.title.caption = trans.__('File Browser (%1)', ks);
+        browser.title.caption = trans.__('This is the tab for File Browser (%1)', ks);
       } else {
         browser.title.caption = trans.__('File Browser');
       }
