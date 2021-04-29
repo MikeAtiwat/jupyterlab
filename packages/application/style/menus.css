@@ -81,7 +81,8 @@
   background: var(--jp-layout-color0);
   color: var(--jp-ui-font-color1);
   border: var(--jp-border-width) solid var(--jp-border-color1);
-  font-size: var(--jp-ui-font-size1);
+  /*font-size: var(--jp-ui-font-size1);*/
+  font-size: var(--jp-menu-font-size);
   box-shadow: var(--jp-elevation-z6);
 }
 
