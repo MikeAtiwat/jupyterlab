@@ -65,11 +65,7 @@ a:hover {
 }
 
 
-/* icon size*/
 
-.f1xpzunt svg {
-  width: 90px;
-}
 
 
 /* Use our own theme for hover styles */
@@ -142,4 +138,8 @@ input::placeholder {
 }
 select {
   box-sizing: border-box;
+}
+
+.jp-JupyterIcon svg {
+  width: 90px;
 }
