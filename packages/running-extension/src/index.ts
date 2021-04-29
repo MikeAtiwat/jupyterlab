@@ -56,7 +56,7 @@ function activate(
   const runningSessionManagers = new RunningSessionManagers();
   const running = new RunningSessions(runningSessionManagers, translator);
   running.id = 'jp-running-sessions';
-  running.title.caption = trans.__('Running Terminals and Kernels');
+  running.title.caption = trans.__('Running Terminals and Kernels I LIKE IT');
   running.title.icon = runningIcon;
   running.node.setAttribute('role', 'region');
   running.node.setAttribute('aria-label', trans.__('Running Sessions section'));
