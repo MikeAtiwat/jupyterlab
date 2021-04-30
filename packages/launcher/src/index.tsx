@@ -155,9 +155,9 @@ export class Launcher extends VDomRenderer<LauncherModel> {
     }
 
     const knownCategories = [
-      this._trans.__('Notebook'),
-      this._trans.__('Console'),
-      this._trans.__('Other')
+      this._trans.__('Notebook For You'),
+      this._trans.__('Console For Me'),
+      this._trans.__('Other For Others')
     ];
     const kernelCategories = [
       this._trans.__('Notebook'),
