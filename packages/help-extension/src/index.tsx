@@ -179,7 +179,7 @@ const launchClassic: JupyterFrontEndPlugin<void> = {
   ): void => {
     const { commands } = app;
     const trans = translator.load('jupyterlab');
-    const category = trans.__('Help');
+    // const category = trans.__('Help');
 
     commands.addCommand(CommandIDs.launchClassic, {
       label: trans.__('Launch Classic Notebook'),
