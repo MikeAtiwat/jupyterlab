@@ -116,15 +116,15 @@ const plugin: JupyterFrontEndPlugin<void> = {
       isEnabled: () => serviceManager.builder.isAvailable
     });
 
-    const category = trans.__('Extension Manager');
-    const command = CommandIDs.toggle;
-    if (palette) {
-      palette.addItem({ command, category });
-    }
+    // const category = trans.__('Extension Manager');
+    // const command = CommandIDs.toggle;
+    // if (palette) {
+    //   palette.addItem({ command, category });
+    // }
 
-    if (mainMenu) {
-      mainMenu.settingsMenu.addGroup([{ command }], 100);
-    }
+    // if (mainMenu) {
+    //   mainMenu.settingsMenu.addGroup([{ command }], 100);
+    // }
   }
 };
 
