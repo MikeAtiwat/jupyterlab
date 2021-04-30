@@ -155,8 +155,8 @@ export class Launcher extends VDomRenderer<LauncherModel> {
     }
 
     const knownCategories = [
-      this._trans.__('Notebook_ABC'),
-      this._trans.__('Console_CDE'),
+      this._trans.__('Notebook'),
+      this._trans.__('Console'),
       this._trans.__('Other')
     ];
     const kernelCategories = [
