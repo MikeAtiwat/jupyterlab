@@ -118,7 +118,7 @@ export class Launcher extends VDomRenderer<LauncherModel> {
     super(options.model);
     this._cwd = options.cwd;
     this.translator = options.translator || nullTranslator;
-    this._trans = this.translator.load('My Lab');
+    this._trans = this.translator.load('jupyterlab');
     this._callback = options.callback;
     this._commands = options.commands;
     this.addClass(LAUNCHER_CLASS);
@@ -160,8 +160,8 @@ export class Launcher extends VDomRenderer<LauncherModel> {
       this._trans.__('Other')
     ];
     const kernelCategories = [
-      this._trans.__('Notebook'),
-      this._trans.__('Console')
+      this._trans.__('Notebook a'),
+      this._trans.__('Console v')
     ];
 
     // First group-by categories

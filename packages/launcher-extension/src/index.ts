@@ -53,7 +53,7 @@ function activate(
   palette: ICommandPalette | null
 ): ILauncher {
   const { commands, shell } = app;
-  const trans = translator.load('My Lab');
+  const trans = translator.load('jupyterlab');
   const model = new LauncherModel();
 
   commands.addCommand(CommandIDs.create, {
