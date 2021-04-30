@@ -81,7 +81,7 @@ const about: JupyterFrontEndPlugin<void> = {
   ): void => {
     const { commands } = app;
     const trans = translator.load('jupyterlab');
-    const category = trans.__('Help');
+    // const category = trans.__('Help');
 
     commands.addCommand(CommandIDs.about, {
       label: trans.__('About %1', app.name),
@@ -152,14 +152,14 @@ const about: JupyterFrontEndPlugin<void> = {
       }
     });
 
-    if (menu) {
-      const helpMenu = menu.helpMenu;
-      helpMenu.addGroup([{ command: CommandIDs.about }], 0);
-    }
+    // if (menu) {
+    //   const helpMenu = menu.helpMenu;
+    //   helpMenu.addGroup([{ command: CommandIDs.about }], 0);
+    // }
 
-    if (palette) {
-      palette.addItem({ command: CommandIDs.about, category });
-    }
+    // if (palette) {
+    //   palette.addItem({ command: CommandIDs.about, category });
+    // }
   }
 };
 
@@ -223,23 +223,23 @@ const resources: JupyterFrontEndPlugin<void> = {
     const { commands, shell, serviceManager } = app;
     const tracker = new WidgetTracker<MainAreaWidget<IFrame>>({ namespace });
     const resources = [
-      {
-        text: trans.__('JupyterLab Reference'),
-        url: 'https://jupyterlab.readthedocs.io/en/stable/'
-      },
-      {
-        text: trans.__('JupyterLab FAQ'),
-        url:
-          'https://jupyterlab.readthedocs.io/en/stable/getting_started/faq.html'
-      },
-      {
-        text: trans.__('Jupyter Reference'),
-        url: 'https://jupyter.org/documentation'
-      },
-      {
-        text: trans.__('Jupyter Forum'),
-        url: 'https://discourse.jupyter.org/c/jupyterlab'
-      },
+      // {
+      //   text: trans.__('JupyterLab Reference'),
+      //   url: 'https://jupyterlab.readthedocs.io/en/stable/'
+      // },
+      // {
+      //   text: trans.__('JupyterLab FAQ'),
+      //   url:
+      //     'https://jupyterlab.readthedocs.io/en/stable/getting_started/faq.html'
+      // },
+      // {
+      //   text: trans.__('Jupyter Reference'),
+      //   url: 'https://jupyter.org/documentation'
+      // },
+      // {
+      //   text: trans.__('Jupyter Forum'),
+      //   url: 'https://discourse.jupyter.org/c/jupyterlab'
+      // },
       {
         text: trans.__('Markdown Reference'),
         url: 'https://commonmark.org/help/'
