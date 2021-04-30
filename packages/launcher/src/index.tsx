@@ -155,13 +155,13 @@ export class Launcher extends VDomRenderer<LauncherModel> {
     }
 
     const knownCategories = [
-      this._trans.__('Notebook'),
-      this._trans.__('Console'),
+      this._trans.__('Notebook_ABC'),
+      this._trans.__('Console_CDE'),
       this._trans.__('Other')
     ];
     const kernelCategories = [
-      this._trans.__('Notebook a'),
-      this._trans.__('Console v')
+      this._trans.__('Notebook'),
+      this._trans.__('Console')
     ];
 
     // First group-by categories
