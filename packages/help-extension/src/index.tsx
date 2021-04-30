@@ -188,14 +188,14 @@ const launchClassic: JupyterFrontEndPlugin<void> = {
       }
     });
 
-    if (menu) {
-      const helpMenu = menu.helpMenu;
-      helpMenu.addGroup([{ command: CommandIDs.launchClassic }], 1);
-    }
+    // if (menu) {
+    //   const helpMenu = menu.helpMenu;
+    //   helpMenu.addGroup([{ command: CommandIDs.launchClassic }], 1);
+    // }
 
-    if (palette) {
-      palette.addItem({ command: CommandIDs.launchClassic, category });
-    }
+    // if (palette) {
+    //   palette.addItem({ command: CommandIDs.launchClassic, category });
+    // }
   }
 };
 
