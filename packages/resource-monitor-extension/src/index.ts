@@ -13,9 +13,9 @@ import {
   MemoryView,
   ResourceUsage,
   CpuView,
-} from 'resource-monitor';
+} from '@jupyterlab/resource-monitor';
 
-import 'resource-monitor/style/index.css';
+import '@jupyterlab/resource-monitor/style/index.css';
 
 import '../style/index.css';
 
