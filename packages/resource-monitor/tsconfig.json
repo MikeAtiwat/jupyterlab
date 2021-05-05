@@ -1,8 +1,9 @@
 {
-  "extends": "../../tsconfigbaserm",
+  "extends": "../../tsconfigbase",
   "compilerOptions": {
     "outDir": "lib",
-    "rootDir": "src"
+    "rootDir": "src",
+    "strictNullChecks": false
   },
   "include": ["src/**/*"]
 }
