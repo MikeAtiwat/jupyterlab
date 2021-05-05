@@ -8,7 +8,8 @@
   "include": ["src/**/*"],
   "references": [
     {
-      "path": "../resource-monitor"
+      "path": "../resource-monitor",
+      "path": "../jupyter-topbar"
     }
   ]
 }
