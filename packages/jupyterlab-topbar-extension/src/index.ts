@@ -9,7 +9,7 @@ import { ICommandPalette } from '@jupyterlab/apputils';
 
 import { ISettingRegistry } from '@jupyterlab/settingregistry';
 
-import { ITopBar, TopBar } from 'jupyterlab-topbar';
+import { ITopBar, TopBar } from '../../jupyterlab-topbar';
 
 import '../style/index.css';
 

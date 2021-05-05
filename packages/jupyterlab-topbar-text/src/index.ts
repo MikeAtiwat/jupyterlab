@@ -11,7 +11,7 @@ import { ISettingRegistry } from '@jupyterlab/settingregistry';
 
 import { Widget } from '@lumino/widgets';
 
-import { ITopBar } from 'jupyterlab-topbar';
+import { ITopBar } from '../../jupyterlab-topbar';
 
 import '../style/index.css';
 
