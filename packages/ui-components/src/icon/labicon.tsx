@@ -313,7 +313,7 @@ export class LabIcon implements LabIcon.ILabIcon, VirtualElement.IRenderer {
     let {
       className,
       container,
-      label,
+      // label,
       title,
       tag = 'div',
       ...styleProps
@@ -344,9 +344,9 @@ export class LabIcon implements LabIcon.ILabIcon, VirtualElement.IRenderer {
 
       returnSvgElement = false;
     }
-    if (label != null) {
-      container.textContent = label;
-    }
+    // if (label != null) {
+    //   container.textContent = label;
+    // }
     Private.initContainer({ container, className, styleProps, title });
 
     // add the svg node to the container
@@ -357,15 +357,15 @@ export class LabIcon implements LabIcon.ILabIcon, VirtualElement.IRenderer {
   }
 
   render(container: HTMLElement, options?: LabIcon.IRendererOptions): void {
-    let label = options?.children?.[0];
-    // narrow type of label
-    if (typeof label !== 'string') {
-      label = undefined;
-    }
+    // let label = options?.children?.[0];
+    // // narrow type of label
+    // if (typeof label !== 'string') {
+    //   label = undefined;
+    // }
 
     this.element({
       container,
-      label,
+      // label,
       ...options?.props
     });
   }
@@ -444,7 +444,7 @@ export class LabIcon implements LabIcon.ILabIcon, VirtualElement.IRenderer {
         const {
           className,
           container,
-          label,
+          // label,
           title,
           tag = 'div',
           ...styleProps
@@ -490,7 +490,6 @@ export class LabIcon implements LabIcon.ILabIcon, VirtualElement.IRenderer {
           return (
             <React.Fragment>
               {svgComponent}
-              {label}
             </React.Fragment>
           );
         } else {
@@ -502,7 +501,6 @@ export class LabIcon implements LabIcon.ILabIcon, VirtualElement.IRenderer {
               )}
             >
               {svgComponent}
-              {label}
             </Tag>
           );
         }
@@ -676,7 +674,7 @@ export namespace LabIcon {
      * Optional text label that will be added as a sibling to the icon's
      * svg node
      */
-    label?: string;
+    // label?: string;
 
     /**
      * HTML element tag used to create the icon's outermost container node,
@@ -737,7 +735,7 @@ namespace Private {
   export function blankElement({
     className = '',
     container,
-    label,
+    // label,
     title,
     tag = 'div',
     ...styleProps
@@ -756,9 +754,9 @@ namespace Private {
       // create a container if needed
       container = document.createElement(tag);
     }
-    if (label != null) {
-      container.textContent = label;
-    }
+    // if (label != null) {
+    //   container.textContent = label;
+    // }
     Private.initContainer({ container, className, styleProps, title });
 
     return container;
@@ -769,7 +767,7 @@ namespace Private {
       {
         className = '',
         container,
-        label,
+        // label,
         title,
         tag = 'div',
         ...styleProps
@@ -790,7 +788,6 @@ namespace Private {
             className={classes(className, LabIconStyle.styleClass(styleProps))}
           >
             {ref && blankIcon.react({ ref })}
-            {label}
           </Tag>
         );
       }
@@ -903,15 +900,15 @@ namespace Private {
    */
   export class ElementRenderer extends Renderer {
     render(container: HTMLElement, options?: LabIcon.IRendererOptions): void {
-      let label = options?.children?.[0];
-      // narrow type of label
-      if (typeof label !== 'string') {
-        label = undefined;
-      }
+      // let label = options?.children?.[0];
+      // // narrow type of label
+      // if (typeof label !== 'string') {
+      //   label = undefined;
+      // }
 
       this._icon.element({
         container,
-        label,
+        // label,
         ...this._rendererOptions?.props,
         ...options?.props
       });
@@ -925,16 +922,15 @@ namespace Private {
    */
   export class ReactRenderer extends Renderer {
     render(container: HTMLElement, options?: LabIcon.IRendererOptions): void {
-      let label = options?.children?.[0];
-      // narrow type of label
-      if (typeof label !== 'string') {
-        label = undefined;
-      }
+      // let label = options?.children?.[0];
+      // // narrow type of label
+      // if (typeof label !== 'string') {
+      //   label = undefined;
+      // }
 
       ReactDOM.render(
         <this._icon.react
           container={container}
-          label={label}
           {...{ ...this._rendererOptions?.props, ...options?.props }}
         />,
         container
