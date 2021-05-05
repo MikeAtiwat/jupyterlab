@@ -191,9 +191,6 @@
       "path": "./packages/rendermime-interfaces"
     },
     {
-      "path": "./packages/resource-monitor"
-    },
-    {
       "path": "./packages/running"
     },
     {

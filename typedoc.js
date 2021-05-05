@@ -62,6 +62,7 @@ const packages = [
   'rendermime-extension',
   'rendermime-interfaces',
   'rendermime',
+  'resource-monitor',
   'running-extension',
   'running',
   'services',
