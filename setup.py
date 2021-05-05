@@ -13,6 +13,12 @@ from jupyter_packaging import wrap_installers, npm_builder, get_data_files, get_
 from packaging.version import Version
 from setuptools import setup
 
+from jupyter_packaging import combine_commands
+from jupyter_packaging import create_cmdclass
+from jupyter_packaging import ensure_targets
+from jupyter_packaging import install_npm
+from jupyter_packaging import skip_if_exists
+
 NAME = "jupyterlab"
 HERE = osp.dirname(osp.abspath(__file__))
 
