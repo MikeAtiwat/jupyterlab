@@ -155,7 +155,7 @@ export class Collapse<T extends Widget = Widget> extends Widget {
   private _setHeader(): void {
     (this._collapsed ? caretUpIcon : caretDownIcon).element({
       container: this._header.node,
-      // label: this._widget.title.label,
+      label: this._widget.title.label,
       elementPosition: 'right',
       height: '28px'
     });
