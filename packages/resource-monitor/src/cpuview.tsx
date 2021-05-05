@@ -21,6 +21,7 @@ const CpuViewComponent = ({
 
   const update = (): void => {
     const { currentCpuPercent } = model;
+    // const newValues: (number | null)[];
     const newValues = model.values.map((value) => value.cpuPercent);
     const newText = `${(currentCpuPercent * 100).toFixed(0)}%`;
     setText(newText);

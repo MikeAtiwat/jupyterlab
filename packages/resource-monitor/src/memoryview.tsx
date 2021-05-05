@@ -1,6 +1,6 @@
 import { ReactWidget } from '@jupyterlab/apputils';
 
-import { useState, useEffect, ReactElement } from 'react';
+import React,{ useState, useEffect, ReactElement } from 'react';
 
 import { IndicatorComponent } from './indicator';
 
