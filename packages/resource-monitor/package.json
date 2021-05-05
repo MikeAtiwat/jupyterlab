@@ -25,11 +25,12 @@
     "url": "https://github.com/jtpio/jupyterlab-system-monitor.git"
   },
   "scripts": {
-    "build": "tsc -b",
+    "build": "tsc",
+    "build:prod": "tsc",
+    "link": "jupyter labextension link . --no-build",
     "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo",
-    "docs": "typedoc src",
-    "prepublishOnly": "npm run build",
-    "watch": "tsc -b --watch"
+    "prepare": "npm run clean && npm run build",
+    "watch": "tsc -w"
   },
   "dependencies": {
     "@jupyterlab/apputils": "^3.0.0-rc.10",
