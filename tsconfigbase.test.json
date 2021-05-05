@@ -19,7 +19,7 @@
     "jsx": "react",
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "strictNullChecks": false,
+    "strictNullChecks": true,
     "skipLibCheck": true
   }
 }
