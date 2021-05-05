@@ -8,7 +8,7 @@ import { ISettingRegistry } from '@jupyterlab/settingregistry';
 
 import { JSONObject } from '@lumino/coreutils';
 
-import { ITopBar } from 'jupyterlab-topbar';
+import { ITopBar } from '../../jupyterlab-topbar';
 
 import {
   MemoryView,
