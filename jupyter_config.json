@@ -1,5 +1,7 @@
 {
   "ResourceUseDisplay": {
-    "track_cpu_percent": true
+    "track_cpu_percent": true,
+    "mem_limit": 8589934592,
+    "cpu_limit": 4
   }
 }
