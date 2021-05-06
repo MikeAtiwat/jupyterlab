@@ -122,9 +122,9 @@ const plugin: JupyterFrontEndPlugin<void> = {
       palette.addItem({ command, category });
     }
 
-    if (mainMenu) {
-      mainMenu.settingsMenu.addGroup([{ command }], 100);
-    }
+    // if (mainMenu) {
+    //   mainMenu.settingsMenu.addGroup([{ command }], 100);
+    // }
   }
 };
 
