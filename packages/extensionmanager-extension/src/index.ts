@@ -62,15 +62,15 @@ const plugin: JupyterFrontEndPlugin<void> = {
       return v;
     };
 
-    // if (enabled && labShell) {
-    //   view = createView();
-    //   view.node.setAttribute('role', 'region');
-    //   view.node.setAttribute(
-    //     'aria-label',
-    //     trans.__('Extension Manager section')
-    //   );
-    //   labShell.add(view, 'left', { rank: 1000 });
-    // }
+    if (enabled && labShell) {
+      view = createView();
+      view.node.setAttribute('role', 'region');
+      view.node.setAttribute(
+        'aria-label',
+        trans.__('Extension Manager section')
+      );
+      labShell.add(view, 'left', { rank: 1000 });
+    }
 
     // If the extension is enabled or disabled,
     // add or remove it from the left area.
@@ -91,7 +91,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
               trans.__('Extension Manager section')
             );
             if (labShell) {
-              // labShell.add(view, 'left', { rank: 1000 });
+              labShell.add(view, 'left', { rank: 1000 });
             }
           } else if (!enabled && view?.isAttached) {
             app.commands.notifyCommandChanged(CommandIDs.toggle);
