@@ -177,8 +177,8 @@ export namespace ResourceUsage {
       this._changed.emit(void 0);
     }
 
-    private _memoryAvailable = false;
-    private _cpuAvailable = false;
+    private _memoryAvailable = true;
+    private _cpuAvailable = true;
     private _currentMemory = 0;
     private _currentCpuPercent = 0;
     private _memoryLimit: number | null = null;
