@@ -50,8 +50,8 @@ export namespace ResourceUsage {
         if (phase === 'rejected') {
           const oldMemoryAvailable = this._memoryAvailable;
           const oldCpuAvailable = this._cpuAvailable;
-          this._memoryAvailable = true;
-          this._cpuAvailable = true;
+          this._memoryAvailable = false;
+          this._cpuAvailable = false;
           this._currentMemory = 0;
           this._memoryLimit = null;
           this._units = 'B';
@@ -144,8 +144,8 @@ export namespace ResourceUsage {
       value: Private.IMetricRequestResult | null
     ): void {
       if (value === null) {
-        this._memoryAvailable = true;
-        this._cpuAvailable = true;
+        this._memoryAvailable = false;
+        this._cpuAvailable = false;
         this._currentMemory = 0;
         this._memoryLimit = null;
         this._units = 'B';
@@ -177,8 +177,8 @@ export namespace ResourceUsage {
       this._changed.emit(void 0);
     }
 
-    private _memoryAvailable = true;
-    private _cpuAvailable = true;
+    private _memoryAvailable = false;
+    private _cpuAvailable = false;
     private _currentMemory = 0;
     private _currentCpuPercent = 0;
     private _memoryLimit: number | null = null;
