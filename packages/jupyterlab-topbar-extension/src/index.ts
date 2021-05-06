@@ -83,7 +83,7 @@ const extension: JupyterFrontEndPlugin<ITopBar> = {
         });
     }
 
-    app.shell.add(topBar, 'top', { rank: 1000 });
+    app.shell.add(topBar, 'left', { rank: 1000 });
 
     return topBar;
   },
