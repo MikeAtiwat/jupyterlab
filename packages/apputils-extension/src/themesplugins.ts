@@ -229,15 +229,15 @@ export const themesPaletteMenuPlugin: JupyterFrontEndPlugin<void> = {
           }
         });
       });
-      mainMenu.settingsMenu.addGroup(
-        [
-          {
-            type: 'submenu' as Menu.ItemType,
-            submenu: themeMenu
-          }
-        ],
-        0
-      );
+      // mainMenu.settingsMenu.addGroup(
+      //   [
+      //     {
+      //       type: 'submenu' as Menu.ItemType,
+      //       submenu: themeMenu
+      //     }
+      //   ],
+      //   0
+      // );
     }
 
     // If we have a command palette, add theme switching options to it.
