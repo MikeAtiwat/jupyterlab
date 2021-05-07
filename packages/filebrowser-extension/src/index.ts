@@ -380,7 +380,7 @@ const browserWidget: JupyterFrontEndPlugin<void> = {
   ): void => {
     const { commands } = app;
     const { defaultBrowser: browser, tracker } = factory;
-    labShell.add(browser, 'left', { rank: 100 });
+    labShell.add(browser, 'right', { rank: 100 });
 
     commands.addCommand(CommandIDs.showBrowser, {
       execute: args => {
