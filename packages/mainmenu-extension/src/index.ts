@@ -234,7 +234,7 @@ const plugin: JupyterFrontEndPlugin<IMainMenu> = {
       });
     }
 
-    app.shell.add(menu, 'header', { rank: 100 });
+    app.shell.add(menu, 'menu', { rank: 100 });
 
     return menu;
   }
